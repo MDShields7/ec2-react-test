@@ -18,3 +18,9 @@ jobs:
     - uses: actions/checkout@v2
       with:
         path: main
+    - name: 
+        run: |
+          echo "npm install"  
+          npm i
+          echo "npm run build'
+          npm run build
