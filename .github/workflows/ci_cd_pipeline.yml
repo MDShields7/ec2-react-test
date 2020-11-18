@@ -19,8 +19,7 @@ jobs:
       with:
         path: main
     - name: Npm stuff
-        run: |
-          echo "npm install"  
-          npm i
-          echo "npm run build'
-          npm run build
+    - run: echo "npm install"  
+    - run: npm i
+    - run: echo "npm run build'
+    - run: npm run build
