@@ -19,7 +19,7 @@ jobs:
       with:
         path: main
     - name: 
-        run: |
+        run: Npm stuff
           echo "npm install"  
           npm i
           echo "npm run build'
