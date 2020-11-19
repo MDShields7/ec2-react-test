@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import io from "socket.io-client";
 // var socket = io(); // PRODUCTION BUILD
-var socket = io('http://localhost:5000', {
+var socket = io('http://18.188.46.182/', {
   withCredentials: true,
   transportOptions: {
     polling: {
