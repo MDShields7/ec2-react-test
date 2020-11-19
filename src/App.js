@@ -4,7 +4,16 @@ import { useState } from "react";
 
 import io from "socket.io-client";
 // var socket = io(); // PRODUCTION BUILD
-var socket = io('http://localhost:5000', { transport : ['websocket'] }); // DEVELOPMENT
+var socket = io('http://localhost:5000', {
+  withCredentials: true,
+  transportOptions: {
+    polling: {
+      extraHeaders: {
+        "my-custom-header": "abcd"
+      }
+    }
+  }
+}); // DEVELOPMENT
 
 function App() {
   const [msgs, setMsgs] = useState([]);
