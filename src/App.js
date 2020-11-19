@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import io from "socket.io-client";
 // var socket = io(); // PRODUCTION BUILD
-var socket = io(); // DEVELOPMENT
+var socket = io('http://localhost'); // DEVELOPMENT
 
 function App() {
   const [msgs, setMsgs] = useState([]);
@@ -26,8 +26,8 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Test ReactJS project.</p>
         <ul>
-          {msgs.map((elem) => (
-            <li>{elem}</li>
+          {msgs.map((elem, index) => (
+            <li key={index} >{elem}</li>
           ))}
         </ul>
       </header>
