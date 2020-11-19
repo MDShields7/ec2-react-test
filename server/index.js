@@ -3,11 +3,11 @@ const app = express();
 
 var http = require("http").createServer(app);
 var io = require("socket.io")(http, {
-    origins: ["https://example.com"],
+    origins: ["http://18.188.46.182/"],
   
     handlePreflightRequest: (req, res) => {
       res.writeHead(200, {
-        "Access-Control-Allow-Origin": "https://example.com",
+        "Access-Control-Allow-Origin": "http://18.188.46.182/",
         "Access-Control-Allow-Methods": "GET,POST",
         "Access-Control-Allow-Headers": "my-custom-header",
         "Access-Control-Allow-Credentials": true
