@@ -17,13 +17,13 @@ app.use(express.static(`${__dirname}/../build`));
 
 io.on("connection", (socket) => {
   console.log('welcome user');
-  io.emit("welcome", { welcome:"welcome" });
+  io.emit("welcome", "welcome" );
 
   socket.on("disconnect", () => {
     console.log("user disconnected");
   });
 });
 
-http.listen(3000, () => {
-  console.log("listening on *:3000");
+http.listen(5000, () => {
+  console.log("listening on *:5000");
 });

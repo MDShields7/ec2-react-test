@@ -13,10 +13,10 @@ function App() {
     // console.log('Array.isArray(msgs)', Array.isArray(msgs))
     // console.log('typeof welcome', typeof welcome)
     // console.log('welcome', welcome)
-    // console.log('newMsgs', newMsgs)
     // console.log('typeof newMsgs', typeof newMsgs)
     let newMsgs = [...msgs];
     newMsgs.push(welcome);
+    console.log('newMsgs', newMsgs)
     setMsgs(newMsgs);
     // setMsgs([...msgs].push(welcome));
   });
