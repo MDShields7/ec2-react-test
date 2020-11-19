@@ -3,8 +3,8 @@ import "./App.css";
 import { useState } from "react";
 
 import io from "socket.io-client";
-var socket = io(); // PRODUCTION BUILD
-// var socket = io('http://18.188.46.182/'); // DEVELOPMENT
+// var socket = io(); // PRODUCTION BUILD
+var socket = io('http://18.188.46.182/:5000'); // DEVELOPMENT
 
 function App() {
   const [msgs, setMsgs] = useState([]);
