@@ -3,7 +3,7 @@ import "./App.css";
 import { useState } from "react";
 
 import io from "socket.io-client";
-// var socket = socketIOClient(); // PRODUCTION BUILD
+// var socket = io(); // PRODUCTION BUILD
 var socket = io('http://18.188.46.182/'); // DEVELOPMENT
 
 function App() {
